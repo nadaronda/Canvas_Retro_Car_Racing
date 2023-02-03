@@ -1,4 +1,18 @@
-canvas{
+body{
+    background-color: blueviolet;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+   
+}
+.instruciones{
+    padding: 10px;
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+}
+canvas {
     border-color: black;
     border-style: double;
+    background-color: gray;
 }
