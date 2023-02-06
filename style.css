@@ -1,9 +1,13 @@
 body{
     background-color: blueviolet;
     display:flex;
-    justify-content: center;
     justify-items: center;
+    justify-content: space-around;
    
+}
+h1{
+    display: flex;
+    justify-content: center;
 }
 .instruciones{
     padding: 10px;
