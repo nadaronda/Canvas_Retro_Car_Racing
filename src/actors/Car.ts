@@ -40,32 +40,19 @@ export class Car extends Actor {
     }
 
     update(): void {
-        //this.angle += this.angleSpeed;
-        //this.angleSpeed *= 0.95;
-        //this.speed = this.speed * 0.95 + this.acceleration;
-        let newPos: Point = {
-            
-            x: this.position.x, /// esto mirar bien no funciona
-            y: this.position.y,
-        }
-            
-        
-        if (checkLimits(newPos)) this.position = newPos;
+       
     }
     
     keyboardEventDown(key: string): void {
         switch (key) {
             case 'ArrowRight':
-                    if (this.position.x >= -10 && this.position.x < 600) {
-                        this.position.x =  this.position.x + 10;
-                    }{console.log(this.position.x)}
-        
-                
-                
+                    if (this.position.x >= -100 && this.position.x <600) {
+                        this.position.x =  this.position.x +100;
+                    }{this.position.x}
                 break;
             case 'ArrowLeft':
                  if (this.position.x >= 0 && this.position.x <610) {
-                        this.position.x =  this.position.x -10;
+                        this.position.x =  this.position.x -100;
                     }
                 break;
             case 'ArrowUp':
