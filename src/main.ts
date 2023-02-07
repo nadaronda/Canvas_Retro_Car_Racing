@@ -38,12 +38,16 @@ window.onload = () => {
         // Borra lo pintado en el canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Dibuja o pinta los actores en el canvas
-        ctx.save();
+
         actors.forEach((actor) => {
+             ctx.save();
             actor.draw(ctx, delta);
+            ctx.restore();
         });
-        ctx.restore();
+        // Dibuja o pinta los actores en el canvas
+        
+       
+        
 
         // Recursividad para el renderizado correcto
         window.requestAnimationFrame(render);
