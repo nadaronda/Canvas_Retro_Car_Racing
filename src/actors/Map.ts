@@ -1,37 +1,53 @@
 import { converAngletoRad } from './../utils/convertAngleToRad';
 import { Actor } from './Actor';
 
-let backgroundMap: string[][] = `WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-WW............WWW............WW
-WW.WWWW.WWWWW.WWW.WWWWW.WWWW.WW
-WW*WWWW.WWWWW.WWW.WWWWW.WWWW*WW
-WW.WWWW.WWWWW.WWW.WWWWW.WWWW.WW
-WW...........................WW
-WW.WWWW.WW.WWWWWWWWW.WW.WWWW.WW
-WW.WWWW.WW.WWWWWWWWW.WW.WWWW.WW
-WW......WW....WWW....WW......WW
-WWWWWWW.WWWWW.WWW.WWWWW.WWWWWWW
-WWWWWWW.WWWWW.WWW.WWWWW.WWWWWWW
-WWWWWWW.WW...........WW.WWWWWWW
-WWWWWWW.WW.WWW---WWW.WW.WWWWWWW
-WWWWWWW.WW.WoooooooW.WW.WWWWWWW
-...........WoooooooW...........
-WWWWWWW.WW.WoooooooW.WW.WWWWWWW
-WWWWWWW.WW.WWWWWWWWW.WW.WWWWWWW
-WWWWWWW.WW...........WW.WWWWWWW
-WWWWWWW.WW.WWWWWWWWW.WW.WWWWWWW
-WWWWWWW.WW.WWWWWWWWW.WW.WWWWWWW
-WW............WWW............WW
-WW.WWWW.WWWWW.WWW.WWWWW.WWWW.WW
-WW*WWWW.WWWWW.WWW.WWWWW.WWWW*WW
-WW...WW.................WW...WW
-WWWW.WW.WW.WWWWWWWWW.WW.WW.WWWW
-WWWW.WW.WW.WWWWWWWWW.WW.WW.WWWW
-WW......WW....WWW....WW......WW
-WW.WWWWWWWWWW.WWW.WWWWWWWWWW.WW
-WW.WWWWWWWWWW.WWW.WWWWWWWWWW.WW
-WW...........................WW
-WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW`
+let backgroundMap: string[][] = `WW............WWW............WWW............WW
+WW..........................................WW
+WW..........................................WW
+WW..........................................WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW..........................................WW
+WW..........................................WW
+WW..........................................WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW..........................................WW
+WW..........................................WW
+WW..........................................WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW..........................................WW
+WW..........................................WW
+WW..........................................WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW..........................................WW
+WW..........................................WW
+WW..........................................WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW..........................................WW
+WW..........................................WW
+WW..........................................WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW..........................................WW
+WW..........................................WW
+WW..........................................WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW............WWW............WWW............WW
+WW..........................................WW
+WW..........................................WW
+WW..........................................WW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW`
     .split('\n')
     .map((row) => row.split(''));
 

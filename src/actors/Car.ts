@@ -55,32 +55,11 @@ export class Car extends Actor {
                         this.position.x =  this.position.x -100;
                     }
                 break;
-            case 'ArrowUp':
-                
-                break;
-            case 'ArrowDown':
-                
-                break;
-            case ' ':
-                
-                break;
+          
             default:
                 console.log('unvalid key');
                 break;
         }
     }
 
-    keyboardEventUp(key: string): void {
-        switch (key) {
-            case 'ArrowUp':
-               // this.acceleration = 0;
-                break;
-            case 'ArrowDown':
-               // this.acceleration = 0;
-                break;
-            default:
-                console.log('unvalid key');
-                break;
-        }
-    }
 }

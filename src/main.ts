@@ -5,18 +5,15 @@ import { Car } from './actors/Car';
 import { CarEvil } from './actors/CarEvil';
 
 window.onload = () => {
-    // Obtiene el canvas
     const canvas = document.getElementById('canvas') as HTMLCanvasElement;
-
-    // Contexto del canvas 2D
     const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 
     // Cálculo de la mitad del canvas
     const canvasMid: Point = { x: canvas.width / 2, y: canvas.height / 2 };
 
-    // Array de Actores que se van a dibujar en pantalla
+    
     const actors: Actor[] = [new FPSViewer(),new Car({ x: 0, y: 0 }),
-    new CarEvil({ x: 0, y:-1020 }) ];
+    new CarEvil({ x:0, y:-1020 }) ];
 
     // Inicializar el primer frame
     let lastFrame = 0;

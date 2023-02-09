@@ -1,23 +1,25 @@
 import { checkLimits } from './../utils/checkLimits';
 import { Point } from '../types/Point';
 import { Size } from '../types/Size';
-import { converAngletoRad } from '../utils/convertAngleToRad';
 import { Actor } from './Actor';
+
 
 export class CarEvil extends Actor {
     // Atributos
     size: Size;
     color: string;
+   
     //speed: number;
     //acceleration: number;
     // maxSpeed: number;
 
-    constructor(position = {x:0 , y:1020 } , size = { w: 300, h: 600 }, color = '#023047') {
+    constructor( position = {x:0 , y:1020 } , size = { w: 300, h: 600 }, color = '#023047') {
         // Posición inicial del Car
         super(position);
         // Dimensiones del Car
         this.size = size;
         this.color = color;
+       
         //this.speed = 0;
         //this.acceleration = 0;
     }
@@ -40,8 +42,9 @@ export class CarEvil extends Actor {
 
     }
 
-    update(): void {
-        if (this.position.y >=-1020 && this.position.y<430){this.position.y += 10 ;}
+    update(delta: number): void {
+        if (this.position.y >= -1020 && this.position.y < 430) { this.position.y += 10; }
+       
     }
     
    
