@@ -3,17 +3,19 @@ import { Actor } from './actors/Actor';
 import { FPSViewer } from './actors/FPSViewer';
 import { Car } from './actors/Car';
 import { CarEvil } from './actors/CarEvil';
+import { canvas, canvasMid,ctx } from './utils/getCanvas';
+import { Barrier } from './actors/Barrier';
 
 window.onload = () => {
-    const canvas = document.getElementById('canvas') as HTMLCanvasElement;
-    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
-
-    // Cálculo de la mitad del canvas
-    const canvasMid: Point = { x: canvas.width / 2, y: canvas.height / 2 };
-
-    
-    const actors: Actor[] = [new FPSViewer(),new Car({ x: 0, y: 0 }),
-    new CarEvil({ x:0, y:-1020 }) ];
+    //Actors
+    const player:Car = new Car({ x: 0, y: 55 }, { w: 55, h: 55 });
+    const actors: Actor[] = [
+        new FPSViewer(),
+        player,
+        new CarEvil({ x: 0, y: -1020 }),
+        new Barrier({position:{ x: 0, y: -1020 }, car: player}),
+    ];
+ 
 
     // Inicializar el primer frame
     let lastFrame = 0;

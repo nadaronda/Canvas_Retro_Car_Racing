@@ -1,8 +1,10 @@
 import { Point } from '../types/Point';
+import { Size } from '../types/Size';
 
-export interface ActorModel {
+export interface IActor {
     // Atributos
-    position: Point;
+    position: Point;// la posicion  x: y: propiedad que tienen todos en comun
+    size: Size;//h: w:
 
     // Métodos
     update: (delta: number) => void;
@@ -11,11 +13,13 @@ export interface ActorModel {
     keyboardEventUp: (key: string) => void
 }
 
-export class Actor implements ActorModel {
+export class Actor implements IActor { //implement para usar interfases
     // Atributos por defecto
     position: Point;
-    constructor(position: Point = { x: 0, y: 0 }) {
+    size: Size;
+    constructor(position: Point= { x: 0, y: 200 }, size: Size = { w:10 , h:10 }) {
         this.position = position;
+        this.size = size;
     }
     // Métodos por defecto
     update(delta: number) {}
@@ -23,3 +27,4 @@ export class Actor implements ActorModel {
     keyboardEventDown(key: string) {}
     keyboardEventUp(key: string) {}
 }
+//super se utiliza para llamar a las propiedades del padre

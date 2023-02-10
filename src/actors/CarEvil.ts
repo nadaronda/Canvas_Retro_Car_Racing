@@ -28,15 +28,22 @@ export class CarEvil extends Actor {
     draw(ctx: CanvasRenderingContext2D, delta: number): void {
         ctx.translate(this.position.x,this.position.y);
         //ctx.rotate(converAngletoRad(this.angle));
-        
+        ctx.fillRect(146,884,83,83);// coordenadas del cuadrado negro para colision
         ctx.fillStyle = this.color;
-        ctx.fillRect(100,900,100,100);
+        ctx.fillRect(150,940,25,25);
+        ctx.fillRect(200,940,25,25);
+        ctx.fillRect(150,900,25,25);
+        ctx.fillRect(200,900,25,25);
+        ctx.fillRect(175,885,25,25);
+        ctx.fillRect(175,900,25,25);
+        ctx.fillRect(175,925,25,25);
+        /*ctx.fillRect(100,900,100,100);
         ctx.fillRect(300,900,100,100);
         ctx.fillRect(200,800,100,100);
         ctx.fillRect(200,700,100,100);
         ctx.fillRect(200,600,100,100);
         ctx.fillRect(100,700,100,100);
-        ctx.fillRect(300,700,100,100);
+        ctx.fillRect(300,700,100,100); dimensiones car grande*/
         ctx.fillStyle = '#023047'; 
     
 
