@@ -2,20 +2,18 @@ import { Point } from './types/Point';
 import { Actor } from './actors/Actor';
 import { FPSViewer } from './actors/FPSViewer';
 import { Car } from './actors/Car';
+import { canvas, canvasMid, ctx } from './utils/getCanvas';
 import { CarEvil } from './actors/CarEvil';
-import { canvas, canvasMid,ctx } from './utils/getCanvas';
-import { Barrier } from './actors/Barrier';
 
 window.onload = () => {
     //Actors
-    const player:Car = new Car({ x: 0, y: 55 }, { w: 55, h: 55 });
+    const player: Car = new Car({ x: canvasMid.x, y: canvas.height - 39 }, { w: 80, h: 108 });
     const actors: Actor[] = [
         new FPSViewer(),
         player,
-        new CarEvil({ x: 0, y: -1020 }),
-        new Barrier({position:{ x: 0, y: -1020 }, car: player}),
+        new CarEvil({ position: { x: 0, y: -1020 }, car: player }),
     ];
- 
+
 
     // Inicializar el primer frame
     let lastFrame = 0;
@@ -29,7 +27,7 @@ window.onload = () => {
         // Actualizando "lastFrame"
         lastFrame = time;
 
-        // Actualiza la posición de los actores del canvas
+        // Actualiza la posición de los actores del canvas<<<<<<
         actors.forEach((actor) => {
             actor.update(delta);
         });
@@ -39,14 +37,14 @@ window.onload = () => {
 
 
         actors.forEach((actor) => {
-             ctx.save();
+            ctx.save();
             actor.draw(ctx, delta);
             ctx.restore();
         });
         // Dibuja o pinta los actores en el canvas
-        
-       
-        
+
+
+
 
         // Recursividad para el renderizado correcto
         window.requestAnimationFrame(render);
