@@ -2,8 +2,8 @@ import { Actor } from './Actor';
 
 export class FPSViewer extends Actor {
     // Atributos
-    constructor(position = { x: 10, y: 35 }) {// el constructor y position es para darle un aposicion sie esto esta ,
-        super(position);                         //no es necesario pionerlo en el main
+    constructor(position = { x: 10, y: 35 }) {
+        super(position);
     }
     // Métodos
     draw(ctx: CanvasRenderingContext2D, delta: number): void {

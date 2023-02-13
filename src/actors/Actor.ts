@@ -3,9 +3,9 @@ import { Size } from '../types/Size';
 
 export interface IActor {
     // Atributos
-    position: Point;// la posicion  x: y: propiedad que tienen todos en comun
-    size: Size;//h: w:
-    crono: number;
+    position: Point;
+    size: Size;
+    //crono: number;
 
     // Métodos
     update: (delta: number) => void;
@@ -14,16 +14,16 @@ export interface IActor {
     keyboardEventUp: (key: string) => void
 }
 
-export class Actor implements IActor { //implement para usar interfases
+export class Actor implements IActor {
     // Atributos por defecto
     position: Point;
     size: Size;
-    crono: number;
+    //crono: number;
 
     constructor(position: Point = { x: 0, y: 200 }, size: Size = { w: 10, h: 10 }) {
         this.position = position;
         this.size = size;
-        this.crono = 0;
+        // this.crono = 0;
     }
     // Métodos por defecto
     update(delta: number) { }
@@ -31,4 +31,3 @@ export class Actor implements IActor { //implement para usar interfases
     keyboardEventDown(key: string) { }
     keyboardEventUp(key: string) { }
 }
-//super se utiliza para llamar a las propiedades del padre

@@ -42,8 +42,8 @@ export class CarEvil extends Actor {
         ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.fillStyle = this.color;
-        ctx.fillStyle = '#202020';
-        ctx.fillRect(-2, -80, 80, 108);//cuadrado negro
+        //ctx.fillStyle = '#202020';
+        //ctx.fillRect(-2, -80, 80, 108);//cuadrado negro
         ctx.fillStyle = 'blue';
         ctx.fillRect(0, 0, 25, 25);
         ctx.fillRect(26, -26, 25, 25);
