@@ -5,6 +5,7 @@ export interface IActor {
     // Atributos
     position: Point;// la posicion  x: y: propiedad que tienen todos en comun
     size: Size;//h: w:
+    crono: number;
 
     // Métodos
     update: (delta: number) => void;
@@ -17,14 +18,17 @@ export class Actor implements IActor { //implement para usar interfases
     // Atributos por defecto
     position: Point;
     size: Size;
-    constructor(position: Point= { x: 0, y: 200 }, size: Size = { w:10 , h:10 }) {
+    crono: number;
+
+    constructor(position: Point = { x: 0, y: 200 }, size: Size = { w: 10, h: 10 }) {
         this.position = position;
         this.size = size;
+        this.crono = 0;
     }
     // Métodos por defecto
-    update(delta: number) {}
-    draw(ctx: CanvasRenderingContext2D, delta: number) {}
-    keyboardEventDown(key: string) {}
-    keyboardEventUp(key: string) {}
+    update(delta: number) { }
+    draw(ctx: CanvasRenderingContext2D, delta: number) { }
+    keyboardEventDown(key: string) { }
+    keyboardEventUp(key: string) { }
 }
 //super se utiliza para llamar a las propiedades del padre

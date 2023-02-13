@@ -16,7 +16,7 @@ export class CarEvil extends Actor {
     touched?: boolean;
     distance?: number;
     constructor(props: InitialEvilProps) {
-        super(props.position = { x: 100, y: -500 });
+        super(props.position);
         this.car = props.car;
         this.color = props.color || "green"
         this.touched = props.touched || false;
@@ -32,7 +32,9 @@ export class CarEvil extends Actor {
        if (this.car.position.y < this.position.y + this.size.h) { console.log("tocado") }
        if (this.position.x+this.size.w> this.position.x ) { console.log("tocado") }
        if(this.position.y+this.size.h> this.position.y ){console.log("tocado")}*/
-        if (this.distance <= this.car.size.w) { alert("game Over") }
+        if (this.distance <= this.car.size.w) {
+            location.reload()
+        }
     }
     draw(ctx: CanvasRenderingContext2D, delta: number): void {
         ctx.translate(this.position.x, this.position.y)
@@ -52,9 +54,9 @@ export class CarEvil extends Actor {
         ctx.fillRect(52, 0, 25, 25);
         ctx.closePath();
         ctx.closePath();
-        ctx.fillStyle = "pink";
-        ctx.font = "40px Consolas";
-        ctx.fillText(`${this.distance?.toFixed(0)}`, 80, -20)
+        // ctx.fillStyle = "pink";
+        // ctx.font = "40px Consolas";
+        // ctx.fillText(`${this.distance?.toFixed(0)}`, 80, -20)
 
 
     }

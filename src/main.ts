@@ -4,14 +4,17 @@ import { FPSViewer } from './actors/FPSViewer';
 import { Car } from './actors/Car';
 import { canvas, canvasMid, ctx } from './utils/getCanvas';
 import { CarEvil } from './actors/CarEvil';
+import { Enemies } from './actors/Enemies';
 
 window.onload = () => {
     //Actors
     const player: Car = new Car({ x: canvasMid.x, y: canvas.height - 39 }, { w: 80, h: 108 });
+    const enemies = new Enemies({ position: { x: 0, y: -1020 }, car: player });
     const actors: Actor[] = [
         new FPSViewer(),
         player,
-        new CarEvil({ position: { x: 0, y: -1020 }, car: player }),
+        //new CarEvil({ position: { x: 0, y: -1020 }, car: player }),
+        ...enemies.CarEvils
     ];
 
 
