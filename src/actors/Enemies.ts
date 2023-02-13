@@ -17,7 +17,7 @@ export class Enemies extends Actor {
         super(props.position)
         this.car = props.car;
         //con un for crearemos los actores malos
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 35; i++) {
 
             const carEvil = new CarEvil({ position: { x: 0 + i + _.random(0, 900), y: 0 + i * -400 }, car: props.car })
             this.CarEvils.push(carEvil)
