@@ -1,26 +1,27 @@
 {
-  "name": "canvas_retro_car_racing",
-  "version": "1.0.0",
-  "description": "- [Canvas\\_Retro\\_Car\\_Racing](#canvas_retro_car_racing)\r - [Mi proyecto de Core Code School](#mi-proyecto-de-core-code-school)\r - [Indice:](#indice)\r   - [1. Título del Juego:](#1-título-del-juego)\r   - [2. Imágenes y vídeos:](#2-imágenes-y-vídeos)\r   - [3. Motivación del proyecto:](#3-motivación-del-proyecto)\r   - [4. Acceso directo al juego:](#4-acceso-directo-al-juego)\r   - [5. Tabla de contenidos o índice:](#5-tabla-de-contenidos-o-índice)\r   - [6. Manual de instalación y deployment:](#6-manual-de-instalación-y-deployment)\r   - [7. Ejemplos de código:](#7-ejemplos-de-código)\r   - [8. Entornos de ejecución:](#8-entornos-de-ejecución)\r   - [9. Listado de paquetes y dependencias:](#9-listado-de-paquetes-y-dependencias)\r   - [10. Agradecimientos:](#10-agradecimientos)\r   - [11. Otras consideraciones:](#11-otras-consideraciones)",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nadaronda/Canvas_Retro_Car_Racing.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nadaronda/Canvas_Retro_Car_Racing/issues"
-  },
-  "homepage": "https://github.com/nadaronda/Canvas_Retro_Car_Racing#readme",
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.1"
-  }
+    "name": "canvas_retro_car_racing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nadaronda/Canvas_Retro_Car_Racing.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nadaronda/Canvas_Retro_Car_Racing/issues"
+    },
+    "homepage": "https://github.com/nadaronda/Canvas_Retro_Car_Racing#readme",
+    "dependencies": {
+        "@types/lodash": "^4.14.191",
+        "lodash": "^4.17.21",
+        "typescript": "^4.9.5",
+        "vite": "^4.1.1"
+    }
 }
