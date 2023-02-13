@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "ghbuild": "vite build --outDir docs --base=/canvas_retro_car_racing"
+        "ghbuild": "vite build --outDir docs --base=/Canvas_Retro_Car_Racing"
     },
     "repository": {
         "type": "git",
