@@ -1,5 +1,5 @@
 body {
-    background-image: url("./img/carImg.jpg");
+    background-image: url("./public/carImg.jpg");
     display: flex;
     justify-items: center;
     justify-content: space-around;

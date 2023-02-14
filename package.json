@@ -1,5 +1,5 @@
 {
-    "name": "canvas_retro_car_racing",
+    "name": "retro-car-racing",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -7,18 +7,18 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "ghbuild": "vite build --outDir docs --base=/Canvas_Retro_Car_Racing"
+        "ghbuild": "vite build --outDir docs --base=/retro-car-racing"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/nadaronda/Canvas_Retro_Car_Racing.git"
+        "url": "git+https://github.com/nadaronda/retro-car-racing.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/nadaronda/Canvas_Retro_Car_Racing/issues"
+        "url": "https://github.com/nadaronda/retro-car-racing/issues"
     },
-    "homepage": "https://github.com/nadaronda/Canvas_Retro_Car_Racing#readme",
+    "homepage": "https://github.com/nadaronda/retro-car-racing#readme",
     "dependencies": {
         "@types/lodash": "^4.14.191",
         "lodash": "^4.17.21",
