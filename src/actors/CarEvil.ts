@@ -1,4 +1,3 @@
-import { convertToObject } from "../../node_modules/typescript/lib/typescript";
 import { Point } from "../types/Point";
 import { distancia } from "../utils/distance";
 import { Actor } from "./Actor";

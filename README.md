@@ -1,10 +1,10 @@
-# Canvas_Retro_Car_Racing
+# retro-car-racing
 
 # Mi proyecto de [Core Code School](https://www.corecode.school/)
 
 # Indice:
 
--   [Canvas_Retro_Car_Racing](#canvas_retro_car_racing)
+-   [retro-car-racing](#retro-car-racing)
 -   [Mi proyecto de Core Code School](#mi-proyecto-de-core-code-school)
 -   [Indice:](#indice)
     -   [1. Título del Juego:](#1-título-del-juego)
@@ -32,7 +32,7 @@ Car race es uno de los juego más famosos de la Brick Game 9999 in 1. Cuya dinam
 
 ## 4. Acceso directo al juego:
 
-[Pincha aquí para poder acceder]()
+[Pincha aquí para poder acceder](nadaronda.github.io/retro-car-racing/)
 
 ## 5. Tabla de contenidos o índice:
 
