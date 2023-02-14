@@ -25,18 +25,17 @@ export class CarEvil extends Actor {
     }
     update(delta: number): void {//add formula de distancia entre dos puntos
         this.distance = distancia({ x: this.position.x, y: this.position.y }, { x: this.car.position.x, y: this.car.position.y });
-        this.position.y += 5;
-        console.log(this.distance)
-        /* this.position.y += 1; 
-       if (this.car.position.x < this.position.x + this.size.w) { console.log("tocado") }
-       if (this.car.position.y < this.position.y + this.size.h) { console.log("tocado") }
-       if (this.position.x+this.size.w> this.position.x ) { console.log("tocado") }
-       if(this.position.y+this.size.h> this.position.y ){console.log("tocado")}*/
-        if (this.distance <= this.car.size.w) {
+        if (this.position.y > -2022 && this.position.y < 1093) { this.position.y += 5; }
+
+        //console.log(this.distance)
+
+        if (this.distance <= this.car.size.w && this.distance <= this.car.size.h) {
             location.reload()
         }
+        console.log(this.distance)
     }
     draw(ctx: CanvasRenderingContext2D, delta: number): void {
+
         ctx.translate(this.position.x, this.position.y)
         ctx.beginPath();
         ctx.fillStyle = this.color;

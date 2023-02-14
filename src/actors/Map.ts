@@ -69,4 +69,4 @@ export class Map extends Actor {
     }
 }
 
-console.log(backgroundMap);
+//console.log(backgroundMap);

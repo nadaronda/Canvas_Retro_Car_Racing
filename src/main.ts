@@ -1,9 +1,7 @@
-import { Point } from './types/Point';
 import { Actor } from './actors/Actor';
 import { FPSViewer } from './actors/FPSViewer';
 import { Car } from './actors/Car';
 import { canvas, canvasMid, ctx } from './utils/getCanvas';
-import { CarEvil } from './actors/CarEvil';
 import { Enemies } from './actors/Enemies';
 import { Map } from './actors/Map';
 
@@ -32,7 +30,7 @@ window.onload = () => {
         // Actualizando "lastFrame"
         lastFrame = time;
 
-        // Actualiza la posición de los actores del canvas<<<<<<
+        // Actualiza la posición de los actores del canvas
         actors.forEach((actor) => {
             actor.update(delta);
         });
