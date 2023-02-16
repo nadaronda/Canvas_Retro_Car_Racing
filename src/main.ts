@@ -5,18 +5,23 @@ import { canvas, canvasMid, ctx } from './utils/getCanvas';
 import { Enemies } from './actors/Enemies';
 import { Map } from './actors/Map';
 import { CarEvil } from './actors/CarEvil';
+import { GameManager } from './actors/GameManager';
 
 
 window.onload = () => {
     //Actors
-    const player: Car = new Car({ x: canvasMid.x, y: canvas.height - 39 }, { w: 80, h: 108 });
-    const enemies = new Enemies({  car: player });
+
+    const player: Car = new Car({ size: { w: 80, h: 108 } });
+    const enemies = new Enemies({ car: player });
+    const gameManager = new GameManager({ position: { x: 100, y: 500 }, enemies: enemies, car: player })
     const static_actors: Actor[] = [
         new Map,
         new FPSViewer(),
         player,
+        gameManager,
+        enemies,
         //new CarEvil({ position: { x: 0, y: -1020 }, car: player }),
-       
+
     ];
 
 
@@ -31,7 +36,7 @@ window.onload = () => {
 
         // Actualizando "lastFrame"
         lastFrame = time;
-        const actors =[...static_actors, ...enemies.getEnemies(),];
+        const actors = [...static_actors, ...enemies.getEnemies(),];
         // Actualiza la posición de los actores del canvas
         actors.forEach((actor) => {
             actor.update(delta);
