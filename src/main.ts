@@ -4,17 +4,19 @@ import { Car } from './actors/Car';
 import { canvas, canvasMid, ctx } from './utils/getCanvas';
 import { Enemies } from './actors/Enemies';
 import { Map } from './actors/Map';
+import { CarEvil } from './actors/CarEvil';
+
 
 window.onload = () => {
     //Actors
     const player: Car = new Car({ x: canvasMid.x, y: canvas.height - 39 }, { w: 80, h: 108 });
-    const enemies = new Enemies({ position: { x: 0, y: -1020 }, car: player });
-    const actors: Actor[] = [
+    const enemies = new Enemies({  car: player });
+    const static_actors: Actor[] = [
         new Map,
         new FPSViewer(),
         player,
         //new CarEvil({ position: { x: 0, y: -1020 }, car: player }),
-        ...enemies.CarEvils
+       
     ];
 
 
@@ -29,7 +31,7 @@ window.onload = () => {
 
         // Actualizando "lastFrame"
         lastFrame = time;
-
+        const actors =[...static_actors, ...enemies.getEnemies(),];
         // Actualiza la posición de los actores del canvas
         actors.forEach((actor) => {
             actor.update(delta);
@@ -58,14 +60,14 @@ window.onload = () => {
 
     // Escuchar la tecla presionada
     document.body.addEventListener('keydown', (e) => {
-        actors.forEach((player) => {
+        static_actors.forEach((player) => {
             player.keyboardEventDown(e.key);
         });
     });
 
     // Escuchar la tecla liberada
     document.body.addEventListener('keyup', (e) => {
-        actors.forEach((player) => {
+        static_actors.forEach((player) => {
             player.keyboardEventUp(e.key);
         });
     });

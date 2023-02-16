@@ -2,11 +2,14 @@ import { Point } from "../types/Point";
 import { distancia } from "../utils/distance";
 import { Actor } from "./Actor";
 import { Car } from "./Car";
+
+
 interface InitialEvilProps {
     position: Point;
     car: Car;
     color?: string;
     touched?: boolean;
+   
 
 }
 export class CarEvil extends Actor {
@@ -14,25 +17,35 @@ export class CarEvil extends Actor {
     car: Car;
     touched?: boolean;
     distance?: number;
+    id : number;
+    expired: boolean;
     constructor(props: InitialEvilProps) {
         super(props.position);
         this.car = props.car;
         this.color = props.color || "green"
         this.touched = props.touched || false;
-
-
+        this.id = parseInt((Math.random()*10000).toFixed(0))
+        this.expired= false;
+       
     }
     update(delta: number): void {//add formula de distancia entre dos puntos
+        
         this.distance = distancia({ x: this.position.x, y: this.position.y }, { x: this.car.position.x, y: this.car.position.y });
-        if (this.position.y > -2022 && this.position.y < 1093) { this.position.y += 5; }
+        this.position.y += 5;
 
         //console.log(this.distance)
 
         if (this.distance <= this.car.size.w && this.distance <= this.car.size.h) {
             location.reload()
         }
-        console.log(this.distance)
+       // console.log(this.distance)
+        //if CarEvil sale del canvas eliminalo
+        if(this.position.y > 1000){
+            this.expired = true;
+        }
+
     }
+   
     draw(ctx: CanvasRenderingContext2D, delta: number): void {
 
         ctx.translate(this.position.x, this.position.y)
