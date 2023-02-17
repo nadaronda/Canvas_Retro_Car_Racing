@@ -4,7 +4,6 @@ import { CarEvil } from "./CarEvil";
 import _ from "lodash";
 
 interface InitialEnemiesProps {
-    //position: Point,
     car: Car;
 }
 export class Enemies extends Actor {
@@ -12,24 +11,34 @@ export class Enemies extends Actor {
     car: Car;
     startGame: boolean;
     countDeadEnemies: number;
+    win: boolean;
 
     constructor(props: InitialEnemiesProps) {
-        super(/*props.position*/)
+        super()
         this.car = props.car;
         this.CarEvils = [];
         this.startGame = false;
-        this.countDeadEnemies = 5;
+        this.countDeadEnemies = 0;
+        this.win = false;
 
         //Creamos infinitos actores con el setInterval llamando la funcion de abajo
         setInterval(() => {
             this.addEnemies();
         }, 1000);
     }
+    contar() {
+        if (this.CarEvils.filter((element) => {
+            element.expired && this.countDeadEnemies++
+        })
+        ) { }
+    }
     //add actor a un array vacio
-
     addEnemies() {
-        const carEvil = new CarEvil({ position: { x: _.random(0, 900), y: 0 }, car: this.car })
-        this.startGame && this.CarEvils.push(carEvil)
+        if (!this.win) {
+            const carEvil = new CarEvil({ position: { x: _.random(0, 900), y: 0 }, car: this.car })
+            this.startGame && this.CarEvils.push(carEvil)
+        }
+
         // console.log(`Created${carEvil.id} enemigo${this.CarEvils.length}`)
     }
     //se ven los actores que hay dentro del array
@@ -37,8 +46,7 @@ export class Enemies extends Actor {
         return this.CarEvils;
     }
     update(delta: number): void {
-
-
+        this.contar()
         //borra los enemigos que se salen del limite del canvas
         const not_expired_carEvil = this.CarEvils.filter((a) => {
             const carEvil = a as CarEvil;
@@ -48,8 +56,11 @@ export class Enemies extends Actor {
 
 
     }
+    //reset enemies
     reset() {
         this.CarEvils = []
+        this.win = true
+
     }
     //para comenzar a crear los enemigos 
     setStartGame() {
