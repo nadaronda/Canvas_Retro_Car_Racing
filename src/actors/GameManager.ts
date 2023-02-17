@@ -37,7 +37,7 @@ export class GameManager extends Actor {
     gameWin() {
 
         //que pase un determinado numero de carEvil y gane y vuelva empezar
-        return this.enemies.countDeadEnemies === 5
+        return this.enemies.countDeadEnemies === 10
 
     }
     gameLost() {
