@@ -23,7 +23,8 @@ export class Car extends Actor {
         this.startGame = false;
 
     }
-    // Métodos
+    // Métodos:
+    // Dibujado del car
     draw(ctx: CanvasRenderingContext2D, delta: number): void {
         ctx.translate(this.position.x, this.position.y);
         ctx.beginPath();
@@ -37,13 +38,12 @@ export class Car extends Actor {
         ctx.fillRect(0, -52, 25, 25);
         ctx.fillRect(52, 0, 25, 25);
         ctx.closePath();
-
     }
 
     update(): void {
         if (this.startGame) {
             let newPosition: Point = { x: this.position.x, y: 0 }
-            if (checkLimits(newPosition)) this.position = newPosition;
+            // checkLimits(newPosition) && (this.position = newPosition)
         }
     }
 
@@ -57,9 +57,11 @@ export class Car extends Actor {
                 break;
         }
     }
+    //funcion que resetea el car al centro del canvas en el eje x
     reset() {
         this.position = { x: canvasMid.x, y: canvas.height - 39 }
     }
+
     setStartGame() {
         this.startGame = true
     }

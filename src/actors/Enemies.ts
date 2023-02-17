@@ -12,6 +12,7 @@ export class Enemies extends Actor {
     startGame: boolean;
     countDeadEnemies: number;
     win: boolean;
+    lost: boolean;
 
     constructor(props: InitialEnemiesProps) {
         super()
@@ -20,7 +21,7 @@ export class Enemies extends Actor {
         this.startGame = false;
         this.countDeadEnemies = 0;
         this.win = false;
-
+        this.lost = false;
         //Creamos infinitos actores con el setInterval llamando la funcion de abajo
         setInterval(() => {
             this.addEnemies();
@@ -37,7 +38,12 @@ export class Enemies extends Actor {
         if (!this.win) {
             const carEvil = new CarEvil({ position: { x: _.random(0, 900), y: 0 }, car: this.car })
             this.startGame && this.CarEvils.push(carEvil)
+        } else if (this.lost = true) {
+            const carEvil = new CarEvil({ position: { x: _.random(0, 900), y: 0 }, car: this.car })
+            this.startGame && this.CarEvils.push(carEvil)
         }
+
+
 
         // console.log(`Created${carEvil.id} enemigo${this.CarEvils.length}`)
     }
@@ -60,6 +66,7 @@ export class Enemies extends Actor {
     reset() {
         this.CarEvils = []
         this.win = true
+        this.countDeadEnemies = 0
 
     }
     //para comenzar a crear los enemigos 

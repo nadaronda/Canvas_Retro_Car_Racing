@@ -16,6 +16,8 @@ export class GameManager extends Actor {
     start: boolean;
     win: boolean;
     finish: boolean;
+    lost: boolean;
+
     constructor(props: InitialGameManagerProps) {
         super(props.position)
         this.car = props.car;
@@ -23,6 +25,8 @@ export class GameManager extends Actor {
         this.start = false;
         this.finish = false;
         this.win = false;
+        this.lost = false;
+
     }
     startGame() {
         this.car.setStartGame()
@@ -33,7 +37,7 @@ export class GameManager extends Actor {
     gameWin() {
 
         //que pase un determinado numero de carEvil y gane y vuelva empezar
-        return this.enemies.countDeadEnemies === 2
+        return this.enemies.countDeadEnemies === 10
 
     }
     gameLost() {
@@ -49,6 +53,7 @@ export class GameManager extends Actor {
 
         }
         if (this.gameLost()) {
+            this.lost = true
             this.resetActors()
         }
     }
@@ -68,6 +73,9 @@ export class GameManager extends Actor {
             ctx.font = '50px Consolas';
             ctx.fillText("Pulse la tecla F5 para empezar", 0, 100)
         }
+        ctx.font = '35px Consolas';
+        ctx.fillStyle = '#000';
+        ctx.fillText(`Coches adelantados: ${this.enemies.countDeadEnemies}`, this.position.x + 100, this.position.y - 465);
 
     }
     keyboardEventDown(key: string): void {

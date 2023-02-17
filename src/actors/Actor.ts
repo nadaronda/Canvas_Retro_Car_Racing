@@ -18,12 +18,10 @@ export class Actor implements IActor {
     // Atributos por defecto
     position: Point;
     size: Size;
-    //crono: number;
 
     constructor(position: Point = { x: 0, y: 200 }, size: Size = { w: 10, h: 10 }) {
         this.position = position;
         this.size = size;
-        // this.crono = 0;
     }
     // Métodos por defecto
     update(delta: number) { }
