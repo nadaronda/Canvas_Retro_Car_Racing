@@ -36,16 +36,13 @@ export class Enemies extends Actor {
     //add actor a un array vacio
     addEnemies() {
         if (!this.win) {
+            console.log(this.win)
             const carEvil = new CarEvil({ position: { x: _.random(0, 900), y: 0 }, car: this.car })
             this.startGame && this.CarEvils.push(carEvil)
-        } else if (this.lost = true) {
+        } /*else if (this.lost = true) {
             const carEvil = new CarEvil({ position: { x: _.random(0, 900), y: 0 }, car: this.car })
             this.startGame && this.CarEvils.push(carEvil)
-        }
-
-
-
-        // console.log(`Created${carEvil.id} enemigo${this.CarEvils.length}`)
+        }*/
     }
     //se ven los actores que hay dentro del array
     getEnemies() {

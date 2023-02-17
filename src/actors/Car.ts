@@ -41,10 +41,7 @@ export class Car extends Actor {
     }
 
     update(): void {
-        if (this.startGame) {
-            let newPosition: Point = { x: this.position.x, y: 0 }
-            // checkLimits(newPosition) && (this.position = newPosition)
-        }
+        if (this.startGame) { let newPosition: Point = { x: this.position.x, y: 0 } }
     }
 
     keyboardEventDown(key: string): void {
@@ -57,7 +54,7 @@ export class Car extends Actor {
                 break;
         }
     }
-    //funcion que resetea el car al centro del canvas en el eje x
+    //funcion que resetea el car en el centro del canvas en el eje x
     reset() {
         this.position = { x: canvasMid.x, y: canvas.height - 39 }
     }

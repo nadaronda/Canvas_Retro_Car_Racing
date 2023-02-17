@@ -39,22 +39,12 @@ export class CarEvil extends Actor {
 
         //console.log(this.distance)
 
-        if (this.distance <= this.car.size.w && this.distance <= this.car.size.h) {
-            this.gameLost = true;
-        };
+        if (this.distance <= this.car.size.w && this.distance <= this.car.size.h) { this.gameLost = true };
+        //if CarEvil sale del canvas 
 
-        // console.log(this.distance)
+        if (this.position.y >= 1000) { this.countDead = true };
         //if CarEvil sale del canvas eliminalo
-        if (this.position.y >= 1000) {
-            // (console.log(`${this.id} ha sido eliminado`))
-            this.countDead = true
-
-        };
-        if (this.position.y >= 1050) {
-            // (console.log(`${this.id} ha sido eliminado`))
-
-            this.expired = true
-        };
+        if (this.position.y >= 1050) { this.expired = true };
 
     }
 

@@ -28,7 +28,7 @@ Car racing
 
 ## 3. Motivación del proyecto:
 
-Car race es uno de los juego más famosos de la Brick Game 9999 in 1. Cuya dinamica es adelantar coches, moviendose de izquierda a derecha para adelantar. Con el paso del tiempo cada vez va más deprisa y cada vez hay más tráfico y más junto, siendo fácil chocar. Al mas mínimo roce perderemos. Este juego me trae muy buenos recuerdos, ya que en antaño me podia tirar las horas muertas jugando con mis hermanos. Es por eso, que he querido intentar al menos hacer una pequeña replica de ello.
+Car race es uno de los juego más famosos de la Brick Game 9999 in 1. Cuya dinamica es adelantar coches, moviendose de izquierda a derecha para adelantar. Con el paso del tiempo cada vez va más deprisa y cada vez hay más tráfico y más junto, siendo fácil chocar. Al mas mínimo roce perderemos. Este juego me trae muy buenos recuerdos, ya que en antaño me podia tirar las horas muertas jugando con mis hermanos. Es por eso, que he decidido intentar al menos hacer una pequeña replica de ello.
 
 ## 4. Acceso directo al juego:
 
@@ -44,10 +44,11 @@ Carpetas:
 -   src: contiene todos los archivos TS divididos por distintas carpetas:
 -   actors: actores del proyecto
 
-    -   Actor.ts
+    -   Actor.ts 
     -   Car.ts
-    -   CarEvil.ts
+    -   CarEvil.ts 
     -   Enemies.ts
+    -   GameManager.ts
     -   FPSViewers.ts
     -   Map.ts
 
@@ -58,13 +59,13 @@ Carpetas:
     -   distance.ts: formula de distancia entre dos puntos
     -   checklimits.ts:
     -   getCanvas.ts:
--   main.ts dónde se entrelazan todos los archivos.
+-   main.ts dónde se cargan todos los archivos.
 
 ## 6. Manual de instalación y deployment:
 
 ```
 Clone the repository:
-    git clone https://github.com/nadaronda/Canvas_Retro_Car_Racing
+    git clone https://github.com/nadaronda/retro-car-racing
 
 Initiate npm:
     npm init
@@ -126,4 +127,4 @@ export const distancia = (obj1Position: Point, obj2Position: Point) => {
 
 ## 10. Agradecimientos:
 
-Agradecimientos principalemente a Core code school por la oportunidad que me estan dando. A mi profesor Juan Pablo. Y a mi familia por su gran apoyo.
+Agradecimientos principalemente a Core code school por la oportunidad que me estan dando. A mi profesor Juan Pablo, mi compañero Daniel Cortina. Y a mi familia por su gran apoyo.

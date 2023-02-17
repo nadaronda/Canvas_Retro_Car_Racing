@@ -37,7 +37,7 @@ export class GameManager extends Actor {
     gameWin() {
 
         //que pase un determinado numero de carEvil y gane y vuelva empezar
-        return this.enemies.countDeadEnemies === 10
+        return this.enemies.countDeadEnemies === 5
 
     }
     gameLost() {
@@ -49,12 +49,13 @@ export class GameManager extends Actor {
     update() {
         if (this.gameWin()) {
             this.win = true
+            this.car.reset()
             this.enemies.reset()
 
         }
         if (this.gameLost()) {
             this.lost = true
-            this.resetActors()
+            location.reload();
         }
     }
     draw(ctx: CanvasRenderingContext2D, delta: number): void {
