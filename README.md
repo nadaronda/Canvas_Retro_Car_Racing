@@ -24,7 +24,7 @@ Car racing
 
 ## 2. Imágenes y vídeos:
 
-![Brick game 9999 in 1 ](./img/Brick_Game_Car.jpg)
+![Brick game 9999 in 1 ](./public/Brick_Game_Car.jpg)
 
 ## 3. Motivación del proyecto:
 
@@ -44,22 +44,22 @@ Carpetas:
 -   src: contiene todos los archivos TS divididos por distintas carpetas:
 -   actors: actores del proyecto
 
-    -   Actor.ts 
-    -   Car.ts
-    -   CarEvil.ts 
-    -   Enemies.ts
-    -   GameManager.ts
-    -   FPSViewers.ts
-    -   Map.ts
+    -   Actor.ts: En este archivo se describe enm general lo que tienen todos loa ctores en comun 
+    -   Car.ts: se encuentra el codigo que maneja el coche que se mueve. Por comandos de flechas derecha e izquierda.
+    -   CarEvil.ts: Es el objeto que tenemos que adelantar.
+    -   Enemies.ts: Es un array de objetos de CarEvil.
+    -   GameManager.ts: En este archico se interactua car y los enemigos.
+    -   FPSViewers.ts: Muestra los frame por segundo este se mantiene a 60.
+    -   Map.ts: Es el fondo del canvas.
 
 -   types:
-    -   Point.ts: posicion de los actores en el mapa
-    -   Size.ts: define el Width y el height de los actores
+    -   Point.ts: Posicion de los actores en el mapa, describe el eje x y eje y.
+    -   Size.ts: Define el Width y el height de los actores
 -   utils:
     -   distance.ts: formula de distancia entre dos puntos
-    -   checklimits.ts:
-    -   getCanvas.ts:
--   main.ts dónde se cargan todos los archivos.
+    -   checklimits.ts: Límites del canvas
+    -   getCanvas.ts: Mide la mitad del canvas.
+-   main.ts: Dónde se cargan todos los archivos.
 
 ## 6. Manual de instalación y deployment:
 
@@ -127,4 +127,4 @@ export const distancia = (obj1Position: Point, obj2Position: Point) => {
 
 ## 10. Agradecimientos:
 
-Agradecimientos principalemente a Core code school por la oportunidad que me estan dando. A mi profesor Juan Pablo, mi compañero Daniel Cortina. Y a mi familia por su gran apoyo.
+Agradecimientos principalemente a [Core code school](https://github.com/core-school) por la oportunidad que me estan dando. A mi profesor [Juan Pablo](https://github.com/Systrent), mi compañero [Daniel Cortina ](https://github.com/DanielCG55). Y a mi familia por su gran apoyo.
